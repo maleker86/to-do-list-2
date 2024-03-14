@@ -1,5 +1,7 @@
 let test_arr = [
-    {name: 'first'},
+    {name: 'first', project: false,},
+    {name: 'second', project: true, priority: 'low',},
+    {name: 'third', priority: "high priority"},
 ];
 
 export {

@@ -17222,10 +17222,14 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _storage_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./storage.js */ "./src/storage.js");
+/* harmony import */ var _dom_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dom.js */ "./src/dom.js");
 
 
-console.log("the key on the first one is: " + Object.keys(_storage_js__WEBPACK_IMPORTED_MODULE_0__.test_arr[0]));
-console.log("the value is: " + Object.values(_storage_js__WEBPACK_IMPORTED_MODULE_0__.test_arr[0]));
+
+// console.log("the key on the first one is: " + Object.keys(test_arr[0]));
+// console.log("the value is: " + Object.values(test_arr[0]));
+
+(0,_dom_js__WEBPACK_IMPORTED_MODULE_1__.displayItems)(_storage_js__WEBPACK_IMPORTED_MODULE_0__.test_arr);
 
 /***/ }),
 
@@ -17233,8 +17237,13 @@ console.log("the value is: " + Object.values(_storage_js__WEBPACK_IMPORTED_MODUL
 /*!********************!*\
   !*** ./src/dom.js ***!
   \********************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   displayItems: () => (/* binding */ displayItems)
+/* harmony export */ });
 let task_button = document.getElementById("task_btn");
 let proj_button = document.getElementById("proj_btn");
 
@@ -17244,6 +17253,35 @@ task_button.addEventListener("click", function () {
 proj_button.addEventListener("click", function () {
   console.log("I am a project");
 });
+
+function displayItems(array) {
+  console.log(array);
+  array.forEach((element) => {
+    let container = document.createElement("div");
+    let h2 = document.createElement("h2");
+    document.body.append(container);
+
+    if (element.name) {
+      container.append(h2);
+      h2.innerText = "Name is: " + element.name;
+    }
+
+    if (element.project) {
+      console.log("I am a project!");
+      let p = document.createElement("p");
+      container.append(p);
+      p.innerText = "This is a project.";
+    }
+
+    if (element.priority) {
+      let p = document.createElement("p");
+      container.append(p);
+      p.innerText = element.priority;
+    }
+
+    // p.innerText = "testing";
+  });
+}
 
 
 /***/ }),
@@ -17260,7 +17298,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   test_arr: () => (/* binding */ test_arr)
 /* harmony export */ });
 let test_arr = [
-    {name: 'first'},
+    {name: 'first', project: false,},
+    {name: 'second', project: true, priority: 'low',},
+    {name: 'third', priority: "high priority"},
 ];
 
 
@@ -17371,7 +17411,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _controller_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./controller.js */ "./src/controller.js");
 /* harmony import */ var _dom_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dom.js */ "./src/dom.js");
-/* harmony import */ var _dom_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_dom_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _storage_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./storage.js */ "./src/storage.js");
 
 
