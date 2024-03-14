@@ -1,5 +1,5 @@
 let test_arr = [
-    {name: first},
+    {name: 'first'},
 ];
 
 export {
