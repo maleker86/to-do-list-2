@@ -6,6 +6,3 @@ import { displayItems, createdProjects, createdTasks, } from './dom.js';
 
 displayItems(tasks);
 displayItems(projects);
-
-console.log(createdTasks);
-console.log(createdProjects);
