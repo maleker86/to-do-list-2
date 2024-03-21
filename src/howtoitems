@@ -1,0 +1,57 @@
+const tasks = [
+    {
+        "task_title": "Say Hello",
+        items: null,
+    },
+    { 
+        "task_title": null,
+        items: {
+            "due_date": 12/14/2024,
+        }
+    },
+    {
+        "title_title": "dishes",
+        items: {
+            "checklist": [
+                "go to sink","turn on water","wash","turn off water",
+            ],
+            "due_date": 3/12/2024,
+        }
+    },
+];
+
+const projects = [
+    {
+        "project_title": "program",
+        "tasks": {
+            "task_title": "finish project",
+            "priority_string": "medium"
+        }
+    },
+    {
+        "project_title": "do dishes",
+        "tasks": {
+            "task_title": null,
+            "priority_string": "high"
+        }
+    },
+];
+
+tasks.forEach(task => {
+    console.log('Task title: ', task.task_title);
+    console.log('Other items: ');
+    console.log(' - Due Date:', task.items.due_date);
+    console.log(' - Checklist:');
+        for (let i = 0; i < task.items.checklist.length; i++) {
+            console.log(task.items.checklist[i]);
+        }
+    console.log('-------------------');
+});
+
+projects.forEach(project => {
+    console.log('Project Title:', project.project_title);
+    console.log('Tasks:');
+    console.log(' - Task Title:', project.tasks.task_title);
+    console.log(' - Priority:', project.tasks.priority_string);
+    console.log('-------------------');
+});
