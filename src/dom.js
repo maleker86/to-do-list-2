@@ -1,39 +1,39 @@
 let task_button = document.getElementById("task_btn");
 let proj_button = document.getElementById("proj_btn");
 
-// task_button.addEventListener("click", function () {
-//   console.log("I am a task");
-// });
-// proj_button.addEventListener("click", function () {
-//   console.log("I am a project");
-// });
+task_button.addEventListener("click", function () {
+  console.log("I am a task");
+});
+proj_button.addEventListener("click", function () {
+  console.log("I am a project");
+});
 
-function newTask(task_title, priority_string) {
-  let task = {
-    task_title: task_title,
-    items: {
-      priority_string: priority_string,
-    },
-  };
-  createdTasks.push(task);
-}
+// function newTask(task_title, priority_string) {
+//   let task = {
+//     task_title: task_title,
+//     items: {
+//       priority_string: priority_string,
+//     },
+//   };
+//   createdTasks.push(task);
+// }
 
-function newProject(project_title,task_title,priority_string) {
-  let project = {
-    project_title: project_title,
-    tasks: newTask(task_title, priority_string),
-  };
-  createdProjects.push(project);
-}
+// function newProject(project_title,task_title,priority_string) {
+//   let project = {
+//     project_title: project_title,
+//     tasks: newTask(task_title, priority_string),
+//   };
+//   createdProjects.push(project);
+// }
 
-let createdProjects = [];
-let createdTasks = [];
+// let createdProjects = [];
+// let createdTasks = [];
 
-let obj1 = new newTask("get up", null);
-let obj2 = new newProject("program", "finish project", "medium");
-let obj3 = new newTask("third", "high priority");
-let obj4 = new newProject("do dishes", null, "high");
-let obj5 = new newProject("do laundry", "finish chores", "low");
+// let obj1 = new newTask("get up", null);
+// let obj2 = new newProject("program", "finish project", "medium");
+// let obj3 = new newTask("third", "high priority");
+// let obj4 = new newProject("do dishes", null, "high");
+// let obj5 = new newProject("do laundry", "finish chores", "low");
 
 export function displayItems(array) {
   console.log("the main array is: ", array);
