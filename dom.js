@@ -1,6 +1,7 @@
 let task_button = document.getElementById("task_btn");
 let proj_button = document.getElementById("proj_btn");
 
+<<<<<<< HEAD
 // task_button.addEventListener("click", function () {
 //   console.log("I am a task");
 // });
@@ -69,3 +70,11 @@ export function displayItems(array) {
     // p.innerText = "testing";
   });
 }
+=======
+task_button.addEventListener("click", function () {
+  console.log("I am a task");
+});
+proj_button.addEventListener("click", function () {
+  console.log("I am a project");
+});
+>>>>>>> parent of 7a188ca (Link all Webpack pgs. Compile in Index)

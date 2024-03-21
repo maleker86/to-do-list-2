@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src/storage.js
 import { createdProjects, createdTasks } from "./dom";
 
@@ -20,4 +21,12 @@ let test_arr = [
 export {
     projects,
     tasks,
+=======
+let test_arr = [
+    {name: first},
+];
+
+export {
+    test_arr,
+>>>>>>> parent of 7a188ca (Link all Webpack pgs. Compile in Index)
 }
